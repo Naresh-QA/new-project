@@ -29,7 +29,7 @@ WebElement space;
 WebElement address;
 
 @FindBy(xpath="//button[normalize-space()='Register']")
-WebElement register;
+WebElement registers;
 
 
 //action methods
@@ -58,6 +58,6 @@ public void setaddress(String Address) {
 	address.sendKeys(Address);
 }
 public void setregister() {
-	register.click();
+	registers.click();
 }
 }
