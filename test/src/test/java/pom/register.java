@@ -60,17 +60,4 @@ public void setaddress(String Address) {
 public void setregister() {
 	register.click();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
