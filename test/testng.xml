@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="register_Suite">
+  <test thread-count="5" name="Test">
+<parameter name="browser" value="Chrome"></parameter>
+<parameter name="os" value="br"></parameter>
+    <classes>
+      <class name="testcases.registertestcases"/> 
+            <!-- <class name="testcases.logintestcases"/>-->
+
+    </classes>
+
+  </test> <!-- Test -->
+</suite> <!-- register_Suite -->

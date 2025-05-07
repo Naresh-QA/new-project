@@ -14,10 +14,16 @@ public class homepage extends base {
 	//Locators
 	@FindBy(xpath="//button[normalize-space()='Register']")
 	WebElement Click_register;
+	@FindBy(xpath="//button[normalize-space()='Login']")
+	WebElement Click_login;
 	
 
 //action Methods
 public void register(){
 	Click_register.click();
+}
+public void login() {
+	Click_login.click();
+	
 }
 }
