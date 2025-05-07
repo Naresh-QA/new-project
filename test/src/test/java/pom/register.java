@@ -3,6 +3,7 @@ package pom;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -68,7 +69,9 @@ public void setaddress(String Address) {
      .until(ExpectedConditions.visibilityOf(address));
 	address.sendKeys(Address);
 }
-public void setregister() {
+public void setregister() throws InterruptedException {
+	 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", registers);
+	 Thread.sleep(5000);
 	 new WebDriverWait(driver, Duration.ofSeconds(10))
      .until(ExpectedConditions.visibilityOf(registers));
 	registers.click();

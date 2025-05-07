@@ -12,6 +12,13 @@
           <include name="tearup"/>
         </methods>
       </class> <!-- testcases.registertestcases -->
+      <class name="testcases.logintestcases">
+        <methods>
+          <include name="login"/>
+          <include name="setup"/>
+          <include name="tearup"/>
+        </methods>
+      </class> <!-- testcases.logintestcases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [register_Suite] -->

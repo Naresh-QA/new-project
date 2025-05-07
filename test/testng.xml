@@ -6,7 +6,7 @@
 <parameter name="os" value="br"></parameter>
     <classes>
       <class name="testcases.registertestcases"/> 
-            <!-- <class name="testcases.logintestcases"/>-->
+            <class name="testcases.logintestcases"/>
 
     </classes>
 
