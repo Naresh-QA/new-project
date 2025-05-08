@@ -18,6 +18,4 @@ public class logintestcases extends basetestcases{
 		boolean otplogo=otp.getlogo();
 		Assert.assertEquals(otplogo, true);
 	}
-		
-
 }
