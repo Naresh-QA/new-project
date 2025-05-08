@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-07T18:08:14 IST" name="register_Suite" finished-at="2025-05-07T18:08:52 IST" duration-ms="37264">
+  <suite started-at="2025-05-08T14:01:25 IST" name="register_Suite" finished-at="2025-05-08T14:02:03 IST" duration-ms="37776">
     <groups>
     </groups>
-    <test started-at="2025-05-07T18:08:14 IST" name="Test" finished-at="2025-05-07T18:08:52 IST" duration-ms="37264">
+    <test started-at="2025-05-08T14:01:25 IST" name="Test" finished-at="2025-05-08T14:02:03 IST" duration-ms="37776">
       <class name="testcases.logintestcases">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testcases.logintestcases@3cd3e762]" started-at="2025-05-07T18:08:42 IST" name="setup" finished-at="2025-05-07T18:08:51 IST" duration-ms="9191" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testcases.logintestcases@7eac9008]" started-at="2025-05-08T14:01:53 IST" name="setup" finished-at="2025-05-08T14:02:02 IST" duration-ms="8730" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,17 +23,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:0, instance:testcases.logintestcases@3cd3e762]" started-at="2025-05-07T18:08:51 IST" name="login" finished-at="2025-05-07T18:08:51 IST" duration-ms="271" status="PASS">
+        <test-method signature="login()[pri:0, instance:testcases.logintestcases@7eac9008]" started-at="2025-05-08T14:02:02 IST" name="login" finished-at="2025-05-08T14:02:03 IST" duration-ms="939" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearup()[pri:0, instance:testcases.logintestcases@3cd3e762]" started-at="2025-05-07T18:08:51 IST" name="tearup" finished-at="2025-05-07T18:08:52 IST" duration-ms="121" status="PASS">
+        <test-method is-config="true" signature="tearup()[pri:0, instance:testcases.logintestcases@7eac9008]" started-at="2025-05-08T14:02:03 IST" name="tearup" finished-at="2025-05-08T14:02:03 IST" duration-ms="181" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearup -->
       </class> <!-- testcases.logintestcases -->
       <class name="testcases.registertestcases">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testcases.registertestcases@1e800aaa]" started-at="2025-05-07T18:08:14 IST" name="setup" finished-at="2025-05-07T18:08:24 IST" duration-ms="9258" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testcases.registertestcases@6f03482]" started-at="2025-05-08T14:01:25 IST" name="setup" finished-at="2025-05-08T14:01:35 IST" duration-ms="9366" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -49,11 +49,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="register()[pri:0, instance:testcases.registertestcases@1e800aaa]" started-at="2025-05-07T18:08:24 IST" name="register" finished-at="2025-05-07T18:08:42 IST" duration-ms="18058" status="PASS">
+        <test-method signature="register()[pri:0, instance:testcases.registertestcases@6f03482]" started-at="2025-05-08T14:01:35 IST" name="register" finished-at="2025-05-08T14:01:53 IST" duration-ms="18094" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- register -->
-        <test-method is-config="true" signature="tearup()[pri:0, instance:testcases.registertestcases@1e800aaa]" started-at="2025-05-07T18:08:42 IST" name="tearup" finished-at="2025-05-07T18:08:42 IST" duration-ms="305" status="PASS">
+        <test-method is-config="true" signature="tearup()[pri:0, instance:testcases.registertestcases@6f03482]" started-at="2025-05-08T14:01:53 IST" name="tearup" finished-at="2025-05-08T14:01:53 IST" duration-ms="192" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearup -->

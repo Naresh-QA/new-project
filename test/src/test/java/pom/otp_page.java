@@ -10,7 +10,7 @@ public class otp_page extends base{
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
-	@FindBy(xpath="//img[@src='../../assets/GoldBharatone.png']")
+	@FindBy(xpath="//h6[normalize-space()='OTP Verification']")
 	WebElement logo;
 	public boolean getlogo() {
 		try {
