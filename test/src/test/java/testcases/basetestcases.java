@@ -12,6 +12,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import com.beust.jcommander.Parameter;
@@ -21,7 +22,7 @@ public class basetestcases {
 
 	@BeforeClass
 	@Parameters({"os","browser"})
-	public void setup(String os,String br) throws InterruptedException, IOException {
+	public void setup(@Optional ("windows")String os,@Optional("chrome") String br) throws InterruptedException, IOException {
 		FileReader file=new FileReader("./src//test//resources//config.resources");
 				p=new Properties();
 				p.load(file);
@@ -30,7 +31,7 @@ public class basetestcases {
 		case "edge":driver= new EdgeDriver(); break;
 		case "firefox": driver=new FirefoxDriver();break;
 		default :System.out.println("not a write browser");return;
-		}
+		}	
 		//driver= new ChromeDriver();
 		//driver=new EdgeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

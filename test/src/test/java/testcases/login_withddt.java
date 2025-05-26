@@ -17,7 +17,6 @@ public class login_withddt extends basetestcases {
 		pom.login log=new pom.login(driver);
 		log.setmobilenumber(mobile_number);
 		log.setclick_login();
-		
 		//otp page
 		otp_page otp=new otp_page(driver);
 		boolean otplogo=otp.getlogo();

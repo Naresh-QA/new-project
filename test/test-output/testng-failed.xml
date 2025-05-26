@@ -12,7 +12,7 @@
       <class name="testcases.login_withddt">
         <methods>
           <include name="setup"/>
-          <include name="loginddt"/>
+          <include name="loginddt" invocation-numbers="0 1 2 3"/>
           <include name="tearup"/>
         </methods>
       </class> <!-- testcases.login_withddt -->
