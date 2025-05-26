@@ -1,20 +1,27 @@
 package pom;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class register extends base {
-
+	
 	public register(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
+
 	@FindBy(xpath="//input[@placeholder=' Ex: Retail Gold']")
 	WebElement Business_name;
 	@FindBy(xpath="//input[@placeholder=' Ex: Kumar']")
 	WebElement full_name;
-
 @FindBy(xpath="//input[@placeholder=' Ex: *********@gmail.com']")
 WebElement mailid;
 @FindBy(xpath="//input[@placeholder=' Ex: 891******4']")
@@ -23,14 +30,17 @@ WebElement mobile_number;
 WebElement date;
 @FindBy(xpath="//input[@placeholder=' Ex: 5*****']")
 WebElement pin_code;
-@FindBy(xpath="//p[normalize-space()='Ameenabad']")
+
+@FindBy(xpath="//p[normalize-space()='Balajinagar']//input[@type='radio']")
 WebElement space;
+//WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
+//WebElement address =wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[@class='input-filed ng-untouched ng-pristine ng-invalid']")));
+
 @FindBy(xpath="//textarea[@class='input-filed ng-untouched ng-pristine ng-invalid']")
 WebElement address;
 
 @FindBy(xpath="//button[normalize-space()='Register']")
-WebElement register;
-
+WebElement registers;
 
 //action methods
 public void setname(String businessname){
@@ -51,26 +61,19 @@ public void setdate(String Date) {
 public void setpin_code(String pincode) {
 	pin_code.sendKeys(pincode);
 }
-public void setspace() {
+public void setspace() throws InterruptedException {
+	 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", space);
+	 Thread.sleep(5000);
 	space.click();
 }
 public void setaddress(String Address) {
+	 new WebDriverWait(driver, Duration.ofSeconds(5))
+     .until(ExpectedConditions.visibilityOf(address));
 	address.sendKeys(Address);
 }
-public void setregister() {
-	register.click();
+public void setregister() throws InterruptedException {
+	 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", registers);
+	 Thread.sleep(5000);
+	registers.click();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+}                                                                       
