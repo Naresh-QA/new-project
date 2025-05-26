@@ -25,7 +25,11 @@ public class exel_utility {
 	    public CellStyle style;
 	    String path;
 
-	    public void excel_Utility(String path) {
+	    public exel_utility(String path2) {
+			// TODO Auto-generated constructor stub
+		}
+
+		public void excel_Utility(String path) {
 	        this.path = path;
 	    }
 

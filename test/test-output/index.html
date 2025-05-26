@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-register_Suite" class="navigator-link">
-              <span class="suite-name border-passed">register_Suite</span>
+              <span class="suite-name border-failed">register_Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-register_Suite" class="navigator-link ">
-                    <span>C:\Users\admin\git\repository\test\testng.xml</span>
+                    <span>C:\Users\nares\git\new-project\test\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-register_Suite" class="hide-methods failed suite-register_Suite"> (hide)</a> <!-- hide-methods failed suite-register_Suite -->
+                      <a href="#" panel-name="suite-register_Suite" class="show-methods failed suite-register_Suite"> (show)</a> <!-- show-methods failed suite-register_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-register_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-register_Suite" title="testcases.login_withddt" class="method navigator-link" hash-for-method="loginddt">loginddt</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-register_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +117,7 @@
                     <div class="method-list-content passed suite-register_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-register_Suite" title="testcases.logintestcases" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-register_Suite" title="testcases.registertestcases" class="method navigator-link" hash-for-method="register">register</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-register_Suite" title="testcases.totest" class="method navigator-link" hash-for-method="tests">tests</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-register_Suite -->
@@ -123,32 +132,42 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-register_Suite" class="panel register_Suite">
-          <div class="suite-register_Suite-class-passed">
+          <div class="suite-register_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testcases.logintestcases</span>
+              <img src="failed.png"/>
+              <span class="class-name">testcases.login_withddt</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="login">
-                  </a> <!-- login -->
-                  <span class="method-name">login</span>
+                  <a name="loginddt">
+                  </a> <!-- loginddt -->
+                  <span class="method-name">loginddt</span>
+                  <div class="stack-trace">java.lang.RuntimeException: java.lang.NullPointerException
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: java.lang.NullPointerException
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:151)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:112)
+	at utilities.exel_utility.getRowCount(exel_utility.java:37)
+	at utilities.DataProviders.getData(DataProviders.java:15)
+	... 25 more
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-register_Suite-class-passed -->
+          </div> <!-- suite-register_Suite-class-failed -->
           <div class="suite-register_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testcases.registertestcases</span>
+              <span class="class-name">testcases.totest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="register">
-                  </a> <!-- register -->
-                  <span class="method-name">register</span>
+                  <a name="tests">
+                  </a> <!-- tests -->
+                  <span class="method-name">tests</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -156,7 +175,7 @@
         </div> <!-- panel register_Suite -->
         <div panel-name="test-xml-register_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\admin\git\repository\test\testng.xml</span>
+            <span class="header-content">C:\Users\nares\git\new-project\test\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -171,8 +190,8 @@
     &lt;parameter name=&quot;os&quot; value=&quot;br&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcases.registertestcases&quot;/&gt;
-      &lt;class name=&quot;testcases.logintestcases&quot;/&gt;
+      &lt;class name=&quot;testcases.totest&quot;/&gt;
+      &lt;class name=&quot;testcases.login_withddt&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- register_Suite --&gt;
@@ -214,18 +233,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'register')
-data.setCell(0, 2, 'testcases.registertestcases')
-data.setCell(0, 3, 18094);
+data.setCell(0, 1, 'tests')
+data.setCell(0, 2, 'testcases.totest')
+data.setCell(0, 3, 5434);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'login')
-data.setCell(1, 2, 'testcases.logintestcases')
-data.setCell(1, 3, 939);
+data.setCell(1, 1, 'loginddt')
+data.setCell(1, 2, 'testcases.login_withddt')
+data.setCell(1, 3, 0);
 window.suiteTableData['register_Suite']= { tableData: data, tableDiv: 'times-div-register_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-register_Suite">
               </div> <!-- times-div-register_Suite -->
             </div> <!-- times-div -->
@@ -251,33 +270,29 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testcases.registertestcases</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testcases.totest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(br, Chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">register</span>
-                <span class="method-start">9395 ms</span>
+                <span class="method-name">tests</span>
+                <span class="method-start">9168 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearup</span>
-                <span class="method-start">27505 ms</span>
+                <span class="method-start">14644 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">testcases.logintestcases</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testcases.login_withddt</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(br, Chrome)</span>
-                <span class="method-start">27698 ms</span>
+                <span class="method-start">15027 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">login</span>
-                <span class="method-start">36429 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearup</span>
-                <span class="method-start">37369 ms</span>
+                <span class="method-start">22560 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

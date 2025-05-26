@@ -9,13 +9,13 @@
     <parameter name="os" value="br"/>
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="testcases.logintestcases">
+      <class name="testcases.login_withddt">
         <methods>
-          <include name="login"/>
           <include name="setup"/>
+          <include name="loginddt"/>
           <include name="tearup"/>
         </methods>
-      </class> <!-- testcases.logintestcases -->
+      </class> <!-- testcases.login_withddt -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [register_Suite] -->

@@ -61,7 +61,9 @@ public void setdate(String Date) {
 public void setpin_code(String pincode) {
 	pin_code.sendKeys(pincode);
 }
-public void setspace() {
+public void setspace() throws InterruptedException {
+	 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", space);
+	 Thread.sleep(5000);
 	space.click();
 }
 public void setaddress(String Address) {
@@ -72,8 +74,6 @@ public void setaddress(String Address) {
 public void setregister() throws InterruptedException {
 	 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", registers);
 	 Thread.sleep(5000);
-	 new WebDriverWait(driver, Duration.ofSeconds(10))
-     .until(ExpectedConditions.visibilityOf(registers));
 	registers.click();
 }
 }                                                                       
