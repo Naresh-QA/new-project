@@ -40,7 +40,7 @@ WebElement space;
 @FindBy(xpath="//textarea[@class='input-filed ng-untouched ng-pristine ng-invalid']")
 WebElement address;
 
-@FindBy(xpath="//button[normalize-space()='Register']")
+@FindBy(xpath="//button[normalize-space()='Register']/")
 WebElement registers;
 
 //action methods

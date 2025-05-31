@@ -7,7 +7,7 @@ import pom.homepage;
 import pom.login;
 
 public class registertestcases extends basetestcases {
-	@Test
+	@Test(groups={"unitTesting","regression"})
 	void register() throws InterruptedException {
 		homepage hp=new homepage(driver);
 		hp.register();

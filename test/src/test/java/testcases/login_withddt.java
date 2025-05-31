@@ -8,7 +8,7 @@ import pom.otp_page;
 import utilities.DataProviders;
 
 public class login_withddt extends basetestcases {
-	@Test (dataProvider="LoginData",dataProviderClass=DataProviders.class)
+	@Test (dataProvider="LoginData",dataProviderClass=DataProviders.class, groups="dataDriven")
 	 void loginddt(String mobile_number, String result) {
 	try {
 		homepage hp=new homepage(driver);
@@ -20,28 +20,34 @@ public class login_withddt extends basetestcases {
 		//otp page
 		otp_page otp=new otp_page(driver);
 		boolean otplogo=otp.getlogo();
-		//Assert.assertEquals(otplogo, true);
-		
+		//Assert.assertEquals(otplogo, true);	
 		if(result.equalsIgnoreCase("pass")) {
 			if(otplogo==true) {
 				Assert.assertTrue(true);
 				driver.navigate().back();
-
+				Thread.sleep(5000);
 			}
 			else{
-				Assert.assertFalse(false);
+				Assert.assertFalse(false, "OTP logo not found as expected for valid number");
+				//driver.navigate().refresh();
+				//log.cleardata();
+				driver.navigate().back();
+				Thread.sleep(3000);
 			}
 		}
 		if(result.equalsIgnoreCase("fail")) {
 			if(otplogo==true) {
-				Assert.assertTrue(false);
+				Assert.fail("OTP logo found for invalid number: " + mobile_number);
 				driver.navigate().back();
-
+				Thread.sleep(5000);
 			}
 			else{
-				Assert.assertFalse(true);
+				Assert.assertTrue(true, "OTP logo not found as expected for invalid number");
+				//driver.navigate().refresh();
+				driver.navigate().back();
+				//log.cleardata();
+				Thread.sleep(3000);
 			}
-		
 	}
 	
 	}catch(Exception e) {
