@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-31T17:01:25 IST" name="register_Suite" finished-at="2025-05-31T17:01:58 IST" duration-ms="33166">
+  <suite started-at="2025-06-15T11:18:42 IST" name="register_Suite" finished-at="2025-06-15T11:19:27 IST" duration-ms="44191">
     <groups>
-      <group name="unitTesting">
-        <method signature="registertestcases.register()[pri:0, instance:testcases.registertestcases@8c3b9d]" name="register" class="testcases.registertestcases"/>
-      </group> <!-- unitTesting -->
-      <group name="regression">
-        <method signature="registertestcases.register()[pri:0, instance:testcases.registertestcases@8c3b9d]" name="register" class="testcases.registertestcases"/>
-      </group> <!-- regression -->
+      <group name="dataDriven">
+        <method signature="login_withddt.loginddt(java.lang.String,java.lang.String)[pri:0, instance:testcases.login_withddt@7530ad9c]" name="loginddt" class="testcases.login_withddt"/>
+      </group> <!-- dataDriven -->
     </groups>
-    <test started-at="2025-05-31T17:01:25 IST" name="Test" finished-at="2025-05-31T17:01:58 IST" duration-ms="33166">
-      <class name="testcases.registertestcases">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testcases.registertestcases@8c3b9d]" started-at="2025-05-31T17:01:26 IST" name="setup" finished-at="2025-05-31T17:01:36 IST" duration-ms="10761" status="PASS">
+    <test started-at="2025-06-15T11:18:42 IST" name="Test" finished-at="2025-06-15T11:19:27 IST" duration-ms="44191">
+      <class name="testcases.login_withddt">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testcases.login_withddt@7530ad9c]" started-at="2025-06-15T11:18:43 IST" name="setup" finished-at="2025-06-15T11:18:55 IST" duration-ms="12575" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,59 +26,75 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="register()[pri:0, instance:testcases.registertestcases@8c3b9d]" started-at="2025-05-31T17:01:36 IST" name="register" finished-at="2025-05-31T17:01:53 IST" duration-ms="16206" status="FAIL">
-          <exception class="org.openqa.selenium.InvalidSelectorException">
+        <test-method signature="loginddt(java.lang.String,java.lang.String)[pri:0, instance:testcases.login_withddt@7530ad9c]" started-at="2025-06-15T11:18:58 IST" name="loginddt" data-provider="LoginData" finished-at="2025-06-15T11:19:04 IST" duration-ms="6196" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7032753299]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginddt -->
+        <test-method signature="loginddt(java.lang.String,java.lang.String)[pri:0, instance:testcases.login_withddt@7530ad9c]" started-at="2025-06-15T11:19:04 IST" name="loginddt" data-provider="LoginData" finished-at="2025-06-15T11:19:12 IST" duration-ms="8393" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7897798797989]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[fail]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginddt -->
+        <test-method signature="loginddt(java.lang.String,java.lang.String)[pri:0, instance:testcases.login_withddt@7530ad9c]" started-at="2025-06-15T11:19:12 IST" name="loginddt" data-provider="LoginData" finished-at="2025-06-15T11:19:20 IST" duration-ms="8299" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[fail]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginddt -->
+        <test-method signature="loginddt(java.lang.String,java.lang.String)[pri:0, instance:testcases.login_withddt@7530ad9c]" started-at="2025-06-15T11:19:20 IST" name="loginddt" data-provider="LoginData" finished-at="2025-06-15T11:19:21 IST" duration-ms="777" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[fail]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[invalid selector: Unable to locate an element with the xpath expression //button[normalize-space()='Register']/ because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//button[normalize-space()='Register']/' is not a valid XPath expression.
-  (Session info: chrome=137.0.7151.55)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
-Build info: version: '4.31.0', revision: '1ef9f18787*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [62e3e31bca808abd341d7c0336ccb949, findElement {value=//button[normalize-space()='Register']/, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.55, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\nares\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55616}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55616/devtoo..., se:cdpVersion: 137.0.7151.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 62e3e31bca808abd341d7c0336ccb949]]>
+              <![CDATA[OTP logo found for invalid number: 1234567890]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //button[normalize-space()='Register']/ because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//button[normalize-space()='Register']/' is not a valid XPath expression.
-  (Session info: chrome=137.0.7151.55)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
-Build info: version: '4.31.0', revision: '1ef9f18787*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [62e3e31bca808abd341d7c0336ccb949, findElement {value=//button[normalize-space()='Register']/, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.55, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\nares\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55616}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55616/devtoo..., se:cdpVersion: 137.0.7151.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 62e3e31bca808abd341d7c0336ccb949
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy16.getWrappedElement(Unknown Source)
-at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
-at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
-at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:727)
-at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:474)
-at pom.register.setregister(register.java:76)
-at testcases.registertestcases.register(registertestcases.java:26)
+              <![CDATA[java.lang.AssertionError: OTP logo found for invalid number: 1234567890
+at org.testng.Assert.fail(Assert.java:111)
+at testcases.login_withddt.loginddt(login_withddt.java:40)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -110,15 +123,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- register -->
-        <test-method is-config="true" signature="tearup()[pri:0, instance:testcases.registertestcases@8c3b9d]" started-at="2025-05-31T17:01:58 IST" name="tearup" finished-at="2025-05-31T17:01:58 IST" duration-ms="430" status="PASS">
+        </test-method> <!-- loginddt -->
+        <test-method is-config="true" signature="tearup()[pri:0, instance:testcases.login_withddt@7530ad9c]" started-at="2025-06-15T11:19:26 IST" name="tearup" finished-at="2025-06-15T11:19:27 IST" duration-ms="216" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearup -->
-      </class> <!-- testcases.registertestcases -->
+      </class> <!-- testcases.login_withddt -->
     </test> <!-- Test -->
   </suite> <!-- register_Suite -->
 </testng-results>

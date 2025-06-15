@@ -92,11 +92,11 @@ public class External_report implements ITestListener{
         String pathOfExtentReport = System.getProperty("user.dir") + "\\external_report\\" + repName;
         File extentReport = new File(pathOfExtentReport);
 
-        try {
-            Desktop.getDesktop().browse(extentReport.toURI());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Desktop.getDesktop().browse(extentReport.toURI());
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
         /*
         try {
