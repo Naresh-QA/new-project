@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Optional;
 
 public class register extends base {
 	
@@ -39,7 +40,7 @@ WebElement space;
 @FindBy(xpath="//textarea[@class='input-filed ng-untouched ng-pristine ng-invalid']")
 WebElement address;
 
-@FindBy(xpath="//button[normalize-space()='Register']")
+@FindBy(xpath="//button[normalize-space()='Register']/")
 WebElement registers;
 
 //action methods

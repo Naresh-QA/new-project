@@ -25,12 +25,9 @@ public class exel_utility {
 	    public CellStyle style;
 	    String path;
 
-	    public exel_utility(String path2) {
-			// TODO Auto-generated constructor stub
-		}
-
-		public void excel_Utility(String path) {
+		public  exel_utility(String path) {
 	        this.path = path;
+	        
 	    }
 
 	    public int getRowCount(String sheetName) throws IOException {

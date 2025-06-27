@@ -7,7 +7,7 @@ import pom.homepage;
 import pom.otp_page;
 
 public class logintestcases extends basetestcases{
-	@Test
+	@Test(groups="sanity")
 	void login() {
 		homepage hp=new homepage(driver);
 		hp.login();

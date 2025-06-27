@@ -10,10 +10,9 @@
 <parameter name="os" value="br"></parameter>
     <classes>
       <!-- <class name="testcases.registertestcases"/> 
-            <class name="testcases.logintestcases"/>-->
-             <class name="testcases.totest"/>
+            <class name="testcases.logintestcases"/>
+             <class name="testcases.totest"/>-->
             <class name="testcases.login_withddt"/>
     </classes>
-
   </test> <!-- Test -->
 </suite> <!-- register_Suite -->

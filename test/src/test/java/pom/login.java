@@ -24,6 +24,10 @@ public class login extends base {
 		login.click();
 		
 	}
+
+	public void cleardata() {
+		mobilenumber.clear();
+	}
 	public boolean getloginpage() {
 		try {
 			return (loginpage.isDisplayed());
@@ -32,4 +36,5 @@ public class login extends base {
 			return false;
 		}
 	}
+	
 }
